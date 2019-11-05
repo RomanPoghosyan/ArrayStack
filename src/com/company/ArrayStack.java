@@ -135,7 +135,24 @@ class ArrayStack<TElement> implements Collection{
         return result;
     }
 
+    @Override
+    public Object[] toArray() {
+        Object[] result = new Object[index];
+        for(int i = 0; i < index; i++){
+            result[i] =  stack[i];
+        }
+        return result;
+    }
 
+
+
+
+
+
+    @Override
+    public Object[] toArray(Object[] a) {
+        return new Object[0];
+    }
 
     @Override
     public boolean removeIf(Predicate filter) {
@@ -157,15 +174,6 @@ class ArrayStack<TElement> implements Collection{
         return null;
     }
 
-    @Override
-    public Object[] toArray() {
-        return new Object[0];
-    }
-
-    @Override
-    public Object[] toArray(Object[] a) {
-        return new Object[0];
-    }
 
 
 

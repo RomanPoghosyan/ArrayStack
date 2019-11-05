@@ -10,15 +10,21 @@ public class Test {
         stack.push(1);
         stack.push(1);
 
+        Object[] stackArray = stack.toArray();
 
-        ArrayStack<Integer> stack2 = new ArrayStack<>(4);
-        stack2.push(5);
-        stack2.push(12);
-        stack.retainAll(stack2);
-
-        for(Object o : stack){
+        for(Object o : stackArray){
             System.out.println(o);
         }
+
+
+//        ArrayStack<Integer> stack2 = new ArrayStack<>(4);
+//        stack2.push(5);
+//        stack2.push(12);
+//        stack.retainAll(stack2);
+//
+//        for(Object o : stack){
+//            System.out.println(o);
+//        }
 //        System.out.println(stack.pop());
 //        System.out.println(stack.pop());
 //        System.out.println(stack.pop());
