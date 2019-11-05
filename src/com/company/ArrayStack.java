@@ -122,6 +122,18 @@ class ArrayStack<TElement> implements Collection{
         return result;
     }
 
+    @Override
+    public boolean retainAll(Collection c) {
+        boolean result = false;
+        for(int i = 0; i < index; i++){
+            if(!c.contains(stack[i])){
+                remove(stack[i]);
+                result = true;
+                i--;
+            }
+        }
+        return result;
+    }
 
 
 
@@ -155,10 +167,7 @@ class ArrayStack<TElement> implements Collection{
         return new Object[0];
     }
 
-    @Override
-    public boolean retainAll(Collection c) {
-        return false;
-    }
+
 
 
     class Iterator<T> implements java.util.Iterator<T>{

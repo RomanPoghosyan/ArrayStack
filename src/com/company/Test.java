@@ -9,12 +9,22 @@ public class Test {
         stack.push(1);
         stack.push(1);
         stack.push(1);
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
+
+
+        ArrayStack<Integer> stack2 = new ArrayStack<>(4);
+        stack2.push(5);
+        stack2.push(12);
+        stack.retainAll(stack2);
+
+        for(Object o : stack){
+            System.out.println(o);
+        }
+//        System.out.println(stack.pop());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.pop());
 
 //        System.out.println(stack.pop());
 //        System.out.println(stack.size());
